@@ -10,75 +10,93 @@ const skills = [
 ];
 
 const skillCategories = [
-	{ name: "Programming Languages", items: ["JavaScript", "Golang", "PHP"] },
+	{ name: "Programming Languages", items: ["JavaScript (ES6+)", "Golang", "PHP"] },
 	{ name: "Frontend", items: ["React.js", "Next.js"] },
 	{ name: "Backend", items: ["Node.js (Express.js)", "Golang (Gin)"] },
 	{ name: "Databases", items: ["MySQL", "PostgreSQL", "MongoDB", "Redis"] },
 	{ name: "DevOps & Tools", items: ["Docker", "Git", "Linux"] }
 ];
 
-// DỮ LIỆU PROJECT ĐƯỢC THIẾT KẾ LINH HOẠT HƠN
 const projects = [
 	{ 
-		id: "p1", name: "e-commerce-api", type: "dir", size: "4.0K", 
-		desc: { en: "RESTful API with Node.js & MongoDB", vi: "RESTful API bằng Node.js & MongoDB" },
+		id: "p1", name: "ichiraku-ramen-menu", type: "dir", size: "18M", 
+		desc: { en: "Digital menu system with real-time shared cart", vi: "Hệ thống menu điện tử với giỏ hàng chia sẻ thời gian thực" },
 		details: {
-			tech: ["Node.js", "Express", "MongoDB", "JWT"],
+			tech: ["NodeJs", "PostgreSQL", "WebSocket", "JavaScript", "HTML/CSS"],
 			images: [
-				"https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800"
+				"/ichiraku/1.png",
+				"/ichiraku/2.png",
+				"/ichiraku/3.png",
+				"/ichiraku/4.png",
+				"/ichiraku/5.png",
+				"/ichiraku/6.png",
+				"/ichiraku/7.png",
+				"/ichiraku/8.png",
+				"/ichiraku/9.png"
 			],
 			links: [
-				{ label: "GitHub Repo", url: "https://github.com/TrungNguyen248/ecommerce-api" },
-				{ label: "API Documentation", url: "https://api.example.com/docs" }
+				{ label: "Client & Backend", url: "https://github.com/TrungNguyen248/ichiraku" },
+				{ label: "Admin", url: "https://github.com/TrungNguyen248/ichiraku-admin" }
 			],
 			about: { 
-				en: "A complete backend service for an e-commerce platform featuring user authentication, product management, and order processing.", 
-				vi: "Hệ thống backend hoàn chỉnh cho sàn thương mại điện tử với tính năng xác thực, quản lý sản phẩm và xử lý đơn hàng." 
+				en: "A digital menu system that allows customers to scan a QR code at their table to view the menu and place orders. Features include real-time shared cart via WebSockets, device-based token session, and instant order status updates for staff.", 
+				vi: "Hệ thống menu số cho phép khách hàng quét mã QR tại bàn để xem menu và đặt món. Các tính năng bao gồm giỏ hàng dùng chung theo thời gian thực qua WebSockets, phiên làm việc dựa trên thiết bị và cập nhật trạng thái đơn hàng tức thì cho nhân viên." 
 			}
 		}
 	},
 	{ 
-		id: "p2", name: "golang-microservices", type: "dir", size: "2.1K", 
-		desc: { en: "High-performance microservices with Go & Gin", vi: "Microservices hiệu năng cao với Golang & Gin" },
+		id: "p2", name: "hokado-flashcard", type: "dir", size: "24M", 
+		desc: { en: "Flashcard learning platform with FSRS algorithm", vi: "Nền tảng học flashcard với thuật toán FSRS" },
 		details: {
-			tech: ["Golang", "Gin", "Redis", "Docker", "gRPC"],
+			tech: ["NextJs", "TypeScript", "Golang", "Gin", "PostgreSQL", "WebSocket", "JWT"],
 			images: [
-				"https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800",
-				"https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800" // Có thể có 2 ảnh
+				"/hokado/1.png",
+				"/hokado/2.png",
+				"/hokado/3.png",
+				"/hokado/4.png",
+				"/hokado/5.png",
+				"/hokado/6.png",
+				"/hokado/7.png",
+				"/hokado/8.png",
 			],
 			links: [
-				{ label: "Source Code", url: "https://github.com/TrungNguyen248/go-microservices" }
+				{ label: "Client", url: "https://github.com/TrungNguyen248/hokado_learn_fe" },
+				{ label: "Backend", url: "https://github.com/TrungNguyen248/hokado_learn_be" }
 			],
 			about: { 
-				en: "Highly scalable microservices architecture built with Golang and gRPC for fast inter-service communication.", 
-				vi: "Kiến trúc microservices có khả năng mở rộng cao, sử dụng Golang và gRPC để giao tiếp nội bộ siêu tốc." 
+				en: "A flashcard learning platform utilizing the FSRS spaced repetition algorithm to automatically schedule review sessions. Built a customizable editor using React-Konva for card design, and developed community features like feeds, likes, comments, and deck sharing.", 
+				vi: "Nền tảng học flashcard sử dụng thuật toán lặp lại ngắt quãng FSRS để tự động lên lịch ôn tập. Xây dựng trình chỉnh sửa tùy biến bằng React-Konva và phát triển các tính năng cộng đồng như bảng tin, thả tim, bình luận và chia sẻ bộ thẻ." 
 			}
 		}
 	},
 	{ 
-		id: "p3", name: "nextjs-dashboard", type: "dir", size: "12M", 
-		desc: { en: "Admin Dashboard with Next.js & React", vi: "Trang quản trị Admin với Next.js" },
+		id: "p3", name: "pixpaw-ecommerce", type: "dir", size: "32M", 
+		desc: { en: "3D Customizer e-commerce for canvas bags", vi: "Trang thương mại điện tử túi canvas có tùy biến 3D" },
 		details: {
-			tech: ["Next.js", "React.js", "TailwindCSS", "PostgreSQL"],
+			tech: ["NextJs", "React Three Fiber", "TypeScript", "Golang", "Gin", "PostgreSQL", "Redis"],
 			images: [
-				"https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800"
+				"/pixpaw/1.png",
+				"/pixpaw/2.png",
+				"/pixpaw/3.png",
+				"/pixpaw/4.png",
 			],
 			links: [
-				{ label: "Live Demo", url: "https://dashboard.trungnguyen.local" },
-				{ label: "GitHub", url: "https://github.com/TrungNguyen248/nextjs-admin" }
+				{ label: "Client", url: "https://github.com/TrungNguyen248/pixpaw-fe" },
+				{ label: "Admin", url: "https://github.com/TrungNguyen248/pixpaw-admin" },
+				{ label: "Backend", url: "https://github.com/TrungNguyen248/pixpaw-be" }
 			],
 			about: { 
-				en: "A modern administrative dashboard providing real-time data visualization and content management features.", 
-				vi: "Bảng điều khiển quản trị hiện đại cung cấp biểu đồ dữ liệu thời gian thực và quản lý nội dung." 
+				en: "An e-commerce website for a canvas bag brand featuring a modern UI and a 3D product customizer built with React Three Fiber. Users can upload images and place decals on 3D models. Uses Redis for fast checkout session handling.", 
+				vi: "Website thương mại điện tử cho thương hiệu túi canvas có giao diện hiện đại và trình tùy chỉnh sản phẩm 3D xây dựng bằng React Three Fiber. Người dùng có thể tải ảnh và chèn decal lên mô hình 3D. Sử dụng Redis để quản lý phiên thanh toán nhanh chóng." 
 			}
 		}
 	}
 ];
 
-const defaultWallpaper = "https://i.pinimg.com/736x/a7/fb/88/a7fb880a4c5acfdefb2703d8559adf00.jpg";
+const defaultWallpaper = "/public/wp-1.jpg";
 ---
 
-<Layout title="Nguyễn Trung Nguyên | Ubuntu OS Portfolio">
+<Layout title="Nguyễn Trung Nguyên | Portfolio">
 	
 	<div id="boot-screen" class="fixed inset-0 z-[99999] bg-[#2c001e] flex flex-col items-center justify-center transition-opacity duration-1000 ease-in-out">
 		<svg width="128px" height="128px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M30 16C30 23.728 23.735 30 16 30C8.265 30 2 23.728 2 16C2 8.265 8.265 2 16 2C23.735 2 30 8.265 30 16Z" fill="#E95420"></path> <path d="M6.82154 14.1563C5.81185 14.1563 5 14.9865 5 16.0035C5 17.0205 5.81867 17.8507 6.82154 17.8507C7.82442 17.8507 8.64309 17.0205 8.64309 16.0035C8.64309 14.9795 7.82442 14.1563 6.82154 14.1563ZM19.8316 22.5482C18.9583 23.0602 18.665 24.1879 19.163 25.0734C19.6679 25.959 20.7799 26.2634 21.6531 25.7514C22.5264 25.2395 22.8197 24.1118 22.3217 23.2262C21.8101 22.3476 20.698 22.0432 19.8316 22.5482ZM10.7785 16.0035C10.7785 14.177 11.6722 12.565 13.0434 11.5896L11.7131 9.32725C10.1167 10.4065 8.93645 12.06 8.43842 13.9902C9.01149 14.4676 9.37989 15.194 9.37989 16.0035C9.37989 16.8129 9.01149 17.5393 8.43842 18.0167C8.92962 19.9469 10.1167 21.6004 11.7131 22.6797L13.0434 20.4174C11.6722 19.4419 10.7785 17.8299 10.7785 16.0035ZM16.0998 10.6071C18.8833 10.6071 21.1619 12.7657 21.4007 15.5261L24 15.4846C23.8704 13.4506 22.9971 11.6241 21.6463 10.282C20.9504 10.5449 20.1522 10.5034 19.4632 10.1021C18.7673 9.69393 18.3375 9.01593 18.2147 8.26875C17.5393 8.08195 16.8298 7.97817 16.0998 7.97817C14.8377 7.97817 13.6506 8.27566 12.5932 8.80838L13.8621 11.1053C14.5375 10.787 15.3016 10.6071 16.0998 10.6071ZM16.0998 21.3998C15.3016 21.3998 14.5375 21.2199 13.8553 20.9017L12.5864 23.1985C13.6438 23.7313 14.8377 24.0287 16.093 24.0287C16.823 24.0287 17.5325 23.925 18.2079 23.7382C18.3239 22.9979 18.7605 22.313 19.4564 21.9048C20.1454 21.4966 20.9504 21.462 21.6395 21.7249C22.9835 20.3828 23.8636 18.5563 23.9932 16.5223L21.3939 16.4808C21.1619 19.2343 18.8833 21.3998 16.0998 21.3998ZM19.8248 9.45178C20.698 9.96374 21.8101 9.65933 22.3149 8.77378C22.8197 7.88824 22.5196 6.76054 21.6463 6.24859C20.7731 5.73663 19.661 6.04104 19.1562 6.92659C18.6582 7.81213 18.9583 8.93983 19.8248 9.45178Z" fill="white"></path> </g></svg>
@@ -144,11 +162,19 @@ const defaultWallpaper = "https://i.pinimg.com/736x/a7/fb/88/a7fb880a4c5acfdefb2
 					</ul>
 				</div>
 
+				<div class="absolute right-6 bottom-8 w-[320px] md:w-[380px] bg-[#1e1e1e]/85 backdrop-blur-md border border-gray-700 rounded-lg p-4 shadow-[0_10px_30px_rgba(0,0,0,0.5)] z-[10] pointer-events-none">
+					<h3 class="font-bold text-sm mb-3 text-gray-300 flex items-center gap-2 font-ubuntu-mono">
+						<svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+						GitHub Contributions
+					</h3>
+					<img src="https://ghchart.rshah.org/E95420/TrungNguyen248" alt="GitHub Contributions" class="w-full opacity-90" />
+				</div>
+
 				<div id="win-terminal" class="app-window absolute hidden flex-col rounded-lg shadow-[0_25px_50px_rgba(0,0,0,0.7)] border border-gray-700 bg-[#300a24]/95 backdrop-blur-md overflow-hidden" style="width: 900px; max-width: 95vw; height: 750px; top: 8%; left: 10%;">
 					<div class="window-header h-10 bg-[#2d2d2d] flex justify-between items-center px-4 select-none cursor-move border-b border-black">
 						<div class="text-gray-300 text-sm font-bold tracking-wide">nguyen@ubuntu:~</div>
 						<div class="flex items-center gap-3">
-							<button id="btn-auto" class="mr-2 text-xs bg-[#dd4814] hover:bg-[#ff5f2e] text-white px-2 py-1 rounded shadow font-bold z-50 cursor-pointer">▶ Auto Run</button>
+							<button id="btn-auto" class="mr-2 text-xs bg-[#dd4814] hover:bg-[#ff5f2e] text-white px-2 py-1 rounded shadow font-bold z-50 cursor-pointer transition-colors">▶ Auto Run</button>
 							<button class="win-btn-minimize w-4 h-4 flex items-center justify-center text-gray-400 hover:text-white bg-transparent hover:bg-gray-600 rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 pointer-events-none" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
 							<button class="win-btn-maximize w-4 h-4 flex items-center justify-center text-gray-400 hover:text-white bg-transparent hover:bg-gray-600 rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 border border-current rounded-sm pointer-events-none" viewBox="0 0 10 10"></svg></button>
 							<button class="win-btn-close w-4 h-4 flex items-center justify-center text-gray-400 hover:text-white bg-transparent hover:bg-[#E95420] rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 pointer-events-none" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
@@ -160,9 +186,9 @@ const defaultWallpaper = "https://i.pinimg.com/736x/a7/fb/88/a7fb880a4c5acfdefb2
 							<ul id="timeline-list" class="relative flex flex-col items-end pr-[3px] mt-2 gap-4 pointer-events-auto"></ul>
 						</div>
 						<div id="main-terminal-scroll" class="flex-1 p-4 md:p-6 overflow-y-auto scroll-smooth font-ubuntu-mono text-base text-gray-200 custom-scrollbar relative flex flex-col">
-							<div class="mb-6 text-gray-400 text-sm">
-								<span class="lang-en">Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-101-generic x86_64)<br>System is ready. Type <span class="text-white font-bold">help</span> to start.</span>
-								<span class="lang-vi">Chào mừng tới Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-101-generic x86_64)<br>Hệ thống đã sẵn sàng. Gõ <span class="text-white font-bold">help</span> để bắt đầu.</span>
+							<div class="mb-6 text-gray-400 text-sm leading-relaxed">
+								<span class="lang-en">Welcome to Ubantu 20.04.4 LTS (GNU/Linux 5.15.0-101-generic x86_64)<br>Click <span class="text-[#dd4814] font-bold">▶ Auto Run</span> on top or type <span class="text-white font-bold">help</span> to start.</span>
+								<span class="lang-vi">Chào mừng tới Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-101-generic x86_64)<br>Nhấn nút <span class="text-[#dd4814] font-bold">▶ Auto Run</span> ở phía trên hoặc gõ <span class="text-white font-bold">help</span> để bắt đầu.</span>
 							</div>
 							<div id="history-container" class="flex flex-col gap-3"></div>
 							<div id="input-line" class="flex items-center mt-3 pb-4">
@@ -173,63 +199,62 @@ const defaultWallpaper = "https://i.pinimg.com/736x/a7/fb/88/a7fb880a4c5acfdefb2
 					</div>
 				</div>
 
-				<div id="win-files" class="app-window absolute hidden flex-col rounded-lg shadow-[0_25px_50px_rgba(0,0,0,0.5)] border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-[#1e1e1e] overflow-hidden" style="width: 750px; height: 500px; top: 15%; left: 20%;">
-					<div class="window-header h-12 bg-gray-200 dark:bg-[#2d2d2d] flex justify-between items-center px-4 select-none cursor-move border-b border-gray-300 dark:border-black">
-						<div class="flex items-center gap-2 font-bold text-gray-800 dark:text-gray-200">
+				<div id="win-files" class="app-window absolute hidden flex-col rounded-lg shadow-[0_25px_50px_rgba(0,0,0,0.5)] border border-gray-300 dark:border-gray-700 bg-[#1e1e1e] overflow-hidden" style="width: 750px; height: 500px; top: 15%; left: 20%;">
+					<div class="window-header h-12 bg-[#2d2d2d] flex justify-between items-center px-4 select-none cursor-move border-b border-black">
+						<div class="flex items-center gap-2 font-bold text-gray-200">
 							<svg class="w-5 h-5 text-orange-500" viewBox="0 0 24 24" fill="currentColor"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
 							<span>Projects <span class="font-normal text-sm text-gray-500">~ /home/nguyen/projects</span></span>
 						</div>
 						<div class="flex items-center gap-3">
-							<button class="win-btn-minimize w-4 h-4 flex items-center justify-center text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white bg-transparent hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 pointer-events-none" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-							<button class="win-btn-maximize w-4 h-4 flex items-center justify-center text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white bg-transparent hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 border border-current rounded-sm pointer-events-none" viewBox="0 0 10 10"></svg></button>
-							<button class="win-btn-close w-4 h-4 flex items-center justify-center text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white bg-transparent hover:bg-[#E95420] rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 pointer-events-none" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+							<button class="win-btn-minimize w-4 h-4 flex items-center justify-center text-gray-400 hover:text-white bg-transparent hover:bg-gray-600 rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 pointer-events-none" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+							<button class="win-btn-maximize w-4 h-4 flex items-center justify-center text-gray-400 hover:text-white bg-transparent hover:bg-gray-600 rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 border border-current rounded-sm pointer-events-none" viewBox="0 0 10 10"></svg></button>
+							<button class="win-btn-close w-4 h-4 flex items-center justify-center text-gray-400 hover:text-white bg-transparent hover:bg-[#E95420] rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 pointer-events-none" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
 						</div>
 					</div>
-					<div class="flex-1 p-6 overflow-y-auto custom-scrollbar flex content-start flex-wrap gap-6 text-gray-800 dark:text-gray-200">
+					<div class="flex-1 p-6 overflow-y-auto custom-scrollbar flex content-start flex-wrap gap-6 text-gray-200">
 						{projects.map(p => (
-							<div class="project-link flex flex-col items-center w-28 p-2 rounded hover:bg-black/10 dark:hover:bg-white/10 transition-colors cursor-pointer group" data-id={p.id}>
+							<div class="project-link flex flex-col items-center w-28 p-2 rounded hover:bg-white/10 transition-colors cursor-pointer group" data-id={p.id}>
 								{p.type === 'dir' ? (
 									<svg class="w-16 h-16 text-orange-400 drop-shadow group-hover:scale-105 transition-transform" viewBox="0 0 24 24" fill="currentColor"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
 								) : (
 									<svg class="w-16 h-16 text-gray-400 drop-shadow group-hover:scale-105 transition-transform" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/></svg>
 								)}
-								<span class="text-sm font-medium text-center truncate w-full mt-1 group-hover:text-blue-600 dark:group-hover:text-blue-400">{p.name}</span>
+								<span class="text-sm font-medium text-center truncate w-full mt-1 group-hover:text-blue-400">{p.name}</span>
 								<span class="text-[10px] text-gray-500 line-clamp-1"><span class="lang-en">{p.desc.en}</span><span class="lang-vi">{p.desc.vi}</span></span>
 							</div>
 						))}
 					</div>
 				</div>
 
-				<div id="win-settings" class="app-window absolute hidden flex-col rounded-lg shadow-[0_25px_50px_rgba(0,0,0,0.5)] border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#1e1e1e] overflow-hidden" style="width: 550px; height: 450px; top: 18%; left: 30%;">
-					<div class="window-header h-12 bg-gray-100 dark:bg-[#2d2d2d] flex justify-between items-center px-4 select-none cursor-move border-b border-gray-300 dark:border-black">
-						<div class="font-bold text-gray-800 dark:text-gray-200 flex items-center gap-2">
+				<div id="win-settings" class="app-window absolute hidden flex-col rounded-lg shadow-[0_25px_50px_rgba(0,0,0,0.5)] border border-gray-700 bg-[#1e1e1e] overflow-hidden" style="width: 550px; height: 350px; top: 18%; left: 30%;">
+					<div class="window-header h-12 bg-[#2d2d2d] flex justify-between items-center px-4 select-none cursor-move border-b border-black">
+						<div class="font-bold text-gray-200 flex items-center gap-2">
 							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
 							<span class="lang-en">Settings</span><span class="lang-vi">Cài đặt</span>
 						</div>
 						<div class="flex items-center gap-3">
-							<button class="win-btn-minimize w-4 h-4 flex items-center justify-center text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white bg-transparent hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 pointer-events-none" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-							<button class="win-btn-maximize w-4 h-4 flex items-center justify-center text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white bg-transparent hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 border border-current rounded-sm pointer-events-none" viewBox="0 0 10 10"></svg></button>
-							<button class="win-btn-close w-4 h-4 flex items-center justify-center text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white bg-transparent hover:bg-[#E95420] rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 pointer-events-none" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+							<button class="win-btn-minimize w-4 h-4 flex items-center justify-center text-gray-400 hover:text-white bg-transparent hover:bg-gray-600 rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 pointer-events-none" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+							<button class="win-btn-maximize w-4 h-4 flex items-center justify-center text-gray-400 hover:text-white bg-transparent hover:bg-gray-600 rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 border border-current rounded-sm pointer-events-none" viewBox="0 0 10 10"></svg></button>
+							<button class="win-btn-close w-4 h-4 flex items-center justify-center text-gray-400 hover:text-white bg-transparent hover:bg-[#E95420] rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 pointer-events-none" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
 						</div>
 					</div>
-					<div class="flex-1 p-6 text-gray-800 dark:text-gray-200 space-y-6 overflow-y-auto custom-scrollbar">
+					<div class="flex-1 p-6 text-gray-200 space-y-6 overflow-y-auto custom-scrollbar">
 						<div>
 							<div class="font-bold text-lg"><span class="lang-en">Wallpaper</span><span class="lang-vi">Hình nền</span></div>
 							<div class="text-sm text-gray-500 mb-3"><span class="lang-en">Select desktop background</span><span class="lang-vi">Chọn ảnh nền máy tính</span></div>
 							<div class="flex gap-3">
-								<button class="wp-btn w-16 h-12 rounded bg-cover bg-center border-2 border-transparent hover:border-[#dd4814] focus:border-[#dd4814] transition-all" style="background-image: url('https://i.pinimg.com/736x/a7/fb/88/a7fb880a4c5acfdefb2703d8559adf00.jpg')" data-url="https://i.pinimg.com/736x/a7/fb/88/a7fb880a4c5acfdefb2703d8559adf00.jpg"></button>
-								<button class="wp-btn w-16 h-12 rounded bg-cover bg-center border-2 border-transparent hover:border-[#dd4814] focus:border-[#dd4814] transition-all" style="background-image: url('https://i.pinimg.com/736x/f9/ca/fc/f9cafc3c68c0eebfcf40ad331cb9931a.jpg')" data-url="https://i.pinimg.com/736x/f9/ca/fc/f9cafc3c68c0eebfcf40ad331cb9931a.jpg"></button>
-								<button class="wp-btn w-16 h-12 rounded bg-cover bg-center border-2 border-transparent hover:border-[#dd4814] focus:border-[#dd4814] transition-all" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600')" data-url="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920"></button>
+								<button class="wp-btn w-16 h-12 rounded bg-cover bg-center border-2 border-transparent hover:border-[#dd4814] focus:border-[#dd4814] transition-all" style="background-image: url('/public/wp-1.jpg')" data-url="/public/wp-1.jpg"></button>
+								<button class="wp-btn w-16 h-12 rounded bg-cover bg-center border-2 border-transparent hover:border-[#dd4814] focus:border-[#dd4814] transition-all" style="background-image: url('/public/wp-2.jpg')" data-url="/public/wp-2.jpg"></button>
+								<button class="wp-btn w-16 h-12 rounded bg-cover bg-center border-2 border-transparent hover:border-[#dd4814] focus:border-[#dd4814] transition-all" style="background-image: url('/public/wp-3.jpg')" data-url="/public/wp-3.jpg"></button>
 							</div>
 						</div>
-						
-						<hr class="border-gray-200 dark:border-gray-700">
+						<hr class="border-gray-700">
 						<div class="flex justify-between items-center">
 							<div>
 								<div class="font-bold text-lg"><span class="lang-en">Language</span><span class="lang-vi">Ngôn ngữ</span></div>
 								<div class="text-sm text-gray-500"><span class="lang-en">System display language</span><span class="lang-vi">Ngôn ngữ hiển thị hệ thống</span></div>
 							</div>
-							<select id="lang-select" class="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white text-sm rounded-lg focus:ring-[#dd4814] focus:border-[#dd4814] block p-2 outline-none">
+							<select id="lang-select" class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-[#dd4814] focus:border-[#dd4814] block p-2 outline-none">
 								<option value="en" selected>English</option>
 								<option value="vi">Tiếng Việt</option>
 							</select>
@@ -237,39 +262,46 @@ const defaultWallpaper = "https://i.pinimg.com/736x/a7/fb/88/a7fb880a4c5acfdefb2
 					</div>
 				</div>
 
-				<div id="win-preview" class="app-window absolute hidden flex-col rounded-lg shadow-[0_30px_60px_rgba(0,0,0,0.6)] border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#1a1a1a] overflow-hidden" style="width: 850px; height: 650px; top: 10%; left: 25%;">
-					<div class="window-header h-10 bg-gray-200 dark:bg-[#202124] flex justify-between items-center px-4 select-none cursor-move border-b border-gray-300 dark:border-black">
-						<div class="flex items-center gap-2 font-bold text-gray-600 dark:text-gray-300 text-xs">
+				<div id="win-preview" class="app-window absolute hidden flex-col rounded-lg shadow-[0_30px_60px_rgba(0,0,0,0.6)] border border-gray-700 bg-[#1a1a1a] overflow-hidden" style="width: 850px; height: 650px; top: 10%; left: 25%;">
+					<div class="window-header h-10 bg-[#202124] flex justify-between items-center px-4 select-none cursor-move border-b border-black">
+						<div class="flex items-center gap-2 font-bold text-gray-300 text-xs">
 							<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
 							<span>Project Viewer</span>
 						</div>
 						<div class="flex items-center gap-3">
-							<button class="win-btn-minimize w-4 h-4 flex items-center justify-center text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white bg-transparent hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 pointer-events-none" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-							<button class="win-btn-maximize w-4 h-4 flex items-center justify-center text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white bg-transparent hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 border border-current rounded-sm pointer-events-none" viewBox="0 0 10 10"></svg></button>
-							<button class="win-btn-close w-4 h-4 flex items-center justify-center text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white bg-transparent hover:bg-[#E95420] rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 pointer-events-none" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+							<button class="win-btn-minimize w-4 h-4 flex items-center justify-center text-gray-400 hover:text-white bg-transparent hover:bg-gray-600 rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 pointer-events-none" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+							<button class="win-btn-maximize w-4 h-4 flex items-center justify-center text-gray-400 hover:text-white bg-transparent hover:bg-gray-600 rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 border border-current rounded-sm pointer-events-none" viewBox="0 0 10 10"></svg></button>
+							<button class="win-btn-close w-4 h-4 flex items-center justify-center text-gray-400 hover:text-white bg-transparent hover:bg-[#E95420] rounded-full z-50 cursor-pointer"><svg class="w-3 h-3 pointer-events-none" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
 						</div>
 					</div>
-					<div class="h-10 bg-gray-100 dark:bg-[#35363a] flex items-center px-4 border-b border-gray-300 dark:border-black shadow-sm shrink-0">
-						<div class="flex-1 bg-white dark:bg-[#202124] rounded-full h-7 flex items-center px-4 border border-gray-300 dark:border-gray-600 text-sm font-mono text-gray-500 dark:text-gray-400 truncate" id="preview-url">
+					<div class="h-10 bg-[#35363a] flex items-center px-4 border-b border-black shadow-sm shrink-0">
+						<div class="flex-1 bg-[#202124] rounded-full h-7 flex items-center px-4 border border-gray-600 text-sm font-mono text-gray-400 truncate" id="preview-url">
 							system://projects/...
 						</div>
 					</div>
-					<div class="flex-1 overflow-y-auto custom-scrollbar bg-gray-50 dark:bg-[#121212] p-6 flex flex-col items-center">
-						<div class="max-w-3xl w-full flex flex-col items-center gap-6 pb-10">
-							<h2 id="preview-title" class="text-3xl font-bold text-gray-900 dark:text-white text-center">Tên Dự Án</h2>
+
+					<div class="flex-1 overflow-y-auto custom-scrollbar bg-[#121212] p-6 flex flex-col items-center">
+						<div class="max-w-4xl w-full flex flex-col items-center gap-4 pb-10">
+							<h2 id="preview-title" class="text-3xl font-bold text-white text-center mb-2">Tên Dự Án</h2>
+							<div id="preview-tech" class="flex flex-wrap justify-center gap-2 mb-4"></div>
 							
-							<div id="preview-tech" class="flex flex-wrap justify-center gap-2">
-								</div>
+							<div class="relative w-full max-w-3xl group/slider mb-6 flex items-center justify-center">
+								<button id="btn-prev-img" class="absolute left-2 md:-left-5 z-10 bg-black/70 hover:bg-[#dd4814] text-white p-2 md:p-3 rounded-full opacity-0 group-hover/slider:opacity-100 transition-all hidden cursor-pointer shadow-lg">
+									<svg class="w-5 h-5 md:w-6 md:h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+								</button>
+								
+								<div id="preview-images" class="w-full flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar items-center">
+									</div>
 
-							<div id="preview-images" class="w-full flex flex-col gap-4 items-center">
-								</div>
+								<button id="btn-next-img" class="absolute right-2 md:-right-5 z-10 bg-black/70 hover:bg-[#dd4814] text-white p-2 md:p-3 rounded-full opacity-0 group-hover/slider:opacity-100 transition-all hidden cursor-pointer shadow-lg">
+									<svg class="w-5 h-5 md:w-6 md:h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+								</button>
+							</div>
 
-							<div id="preview-links" class="w-full flex flex-col items-center gap-3 my-4">
-								</div>
-
-							<div class="w-full text-center">
-								<p id="preview-desc-en" class="lang-en text-gray-700 dark:text-gray-300 leading-relaxed text-lg"></p>
-								<p id="preview-desc-vi" class="lang-vi text-gray-700 dark:text-gray-300 leading-relaxed text-lg"></p>
+							<div id="preview-links" class="w-full flex flex-col items-center gap-3 mb-4"></div>
+							<div class="w-full text-center max-w-3xl">
+								<p id="preview-desc-en" class="lang-en text-gray-300 leading-relaxed text-lg"></p>
+								<p id="preview-desc-vi" class="lang-vi text-gray-300 leading-relaxed text-lg"></p>
 							</div>
 						</div>
 					</div>
@@ -300,9 +332,9 @@ const defaultWallpaper = "https://i.pinimg.com/736x/a7/fb/88/a7fb880a4c5acfdefb2
 	<template id="tpl-whoami">
 		<div class="mt-1 mb-3 animate-fade-in text-gray-200">
 			<h1 class="text-2xl font-bold mb-1 text-white">Nguyễn Trung Nguyên</h1>
-			<p class="text-[#E95420] mb-2 font-bold">Software Engineer / Full-stack Developer</p>
-			<p class="lang-en">Passionate about building scalable web applications and exploring new technologies.</p>
-			<p class="lang-vi">Đam mê xây dựng các ứng dụng web tối ưu và khám phá các công nghệ mới.</p>
+			<p class="text-[#E95420] mb-2 font-bold">Full Stack Developer</p>
+			<p class="lang-en">I'm a Full Stack Developer with 2 years of experience in Web Development, along with knowledge of UI/UX design. I enjoy solving front-end problems and creating the best experience for users. I also spend time learning new technologies and practicing to become a better developer.</p>
+			<p class="lang-vi">Tôi là Full Stack Developer với 2 năm kinh nghiệm Phát triển Web, cùng với kiến thức về thiết kế UI/UX. Tôi thích giải quyết các vấn đề front-end và tạo ra trải nghiệm tốt nhất cho người dùng. Tôi cũng dành thời gian học hỏi công nghệ mới và thực hành để trở thành một lập trình viên giỏi hơn.</p>
 		</div>
 	</template>
 
@@ -346,23 +378,23 @@ const defaultWallpaper = "https://i.pinimg.com/736x/a7/fb/88/a7fb880a4c5acfdefb2
 			<div class="flex flex-col gap-2 pl-2">
 				<div class="flex items-center gap-3 w-fit group/contact">
 					<span class="text-[#729fcf] font-bold w-24">[Phone]</span>
-					<a href="tel:0364036518" class="hover:text-[#dd4814] transition-colors underline decoration-dashed">0364036518</a>
+					<a href="tel:0364036518" class="hover:text-[#dd4814] transition-colors underline decoration-dashed text-sm md:text-base">0364036518</a>
 					<button class="copy-btn text-gray-500 hover:text-white opacity-0 group-hover/contact:opacity-100 transition-opacity" data-copy="0364036518" title="Copy"><svg class="w-4 h-4 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg></button>
 				</div>
 				<div class="flex items-center gap-3 w-fit group/contact">
 					<span class="text-[#729fcf] font-bold w-24">[Email]</span>
-					<a href="mailto:ntnguyen248nd@gmail.com" class="hover:text-[#dd4814] transition-colors underline decoration-dashed">ntnguyen248nd@gmail.com</a>
+					<a href="mailto:ntnguyen248nd@gmail.com" class="hover:text-[#dd4814] transition-colors underline decoration-dashed text-sm md:text-base">ntnguyen248nd@gmail.com</a>
 					<button class="copy-btn text-gray-500 hover:text-white opacity-0 group-hover/contact:opacity-100 transition-opacity" data-copy="ntnguyen248nd@gmail.com" title="Copy"><svg class="w-4 h-4 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg></button>
 				</div>
 				<div class="flex items-center gap-3 w-fit group/contact">
 					<span class="text-[#729fcf] font-bold w-24">[GitHub]</span>
-					<a href="https://github.com/TrungNguyen248" target="_blank" class="hover:text-[#dd4814] transition-colors underline decoration-dashed">github.com/TrungNguyen248</a>
+					<a href="https://github.com/TrungNguyen248" target="_blank" class="hover:text-[#dd4814] transition-colors underline decoration-dashed text-sm md:text-base">github.com/TrungNguyen248</a>
 					<button class="copy-btn text-gray-500 hover:text-white opacity-0 group-hover/contact:opacity-100 transition-opacity" data-copy="https://github.com/TrungNguyen248" title="Copy"><svg class="w-4 h-4 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg></button>
 				</div>
 				<div class="flex items-center gap-3 w-fit group/contact">
 					<span class="text-[#729fcf] font-bold w-24">[LinkedIn]</span>
-					<a href="https://www.linkedin.com/in/ntnguyen248/" target="_blank" class="hover:text-[#dd4814] transition-colors underline decoration-dashed">linkedin.com/in/ntnguyen248</a>
-					<button class="copy-btn text-gray-500 hover:text-white opacity-0 group-hover/contact:opacity-100 transition-opacity" data-copy="https://www.linkedin.com/in/ntnguyen248/" title="Copy"><svg class="w-4 h-4 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg></button>
+					<a href="https://www.linkedin.com/in/ntnguyen248/" target="_blank" class="hover:text-[#dd4814] transition-colors underline decoration-dashed text-sm md:text-base">linkedin.com/in/ntnguyen248</a>
+					<button class="copy-btn text-gray-500 hover:text-white opacity-0 group-hover/contact:opacity-100 transition-opacity" data-copy="https://www.linkedin.com/in/ntnguyen248/" title="Copy"><svg class="w-4 h-4 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg></button>
 				</div>
 			</div>
 		</div>
@@ -414,7 +446,7 @@ const defaultWallpaper = "https://i.pinimg.com/736x/a7/fb/88/a7fb880a4c5acfdefb2
 				setTimeout(() => {
 					bootScreen.style.display = 'none';
 					runMouseAnimation(); 
-				}, 1500);
+				}, 1000);
 			}, 2000);
 
 			function runMouseAnimation() {
@@ -627,52 +659,73 @@ const defaultWallpaper = "https://i.pinimg.com/736x/a7/fb/88/a7fb880a4c5acfdefb2
 			activitiesBackdrop.addEventListener('click', () => { if(isOverviewActive) toggleActivities(); });
 
 
-			// --- 4. PREVIEW WINDOW (DYNAMIC PROJECT DETAILS) ---
+
+			// --- 4. PREVIEW WINDOW LOGIC & SLIDER ---
 			function openProjectPreview(id) {
-				const p = (window as any).portfolioProjects.find(item => item.id === id);
+				const p = window.portfolioProjects.find(item => item.id === id);
 				if (!p) return;
 
 				document.getElementById('preview-title').textContent = p.name;
 				document.getElementById('preview-url').textContent = `system://projects/${p.name}`;
 				
-				// Xóa ảnh cũ, thêm array ảnh mới
+				// 1. RENDER SLIDER ẢNH
 				const imgContainer = document.getElementById('preview-images');
+				const btnPrev = document.getElementById('btn-prev-img');
+				const btnNext = document.getElementById('btn-next-img');
+				const scrollHint = document.getElementById('preview-scroll-hint'); // Gợi ý cuộn (nếu có)
+				
 				imgContainer.innerHTML = '';
-				if (p.details && p.details.images) {
+				
+				if (p.details && p.details.images && p.details.images.length > 0) {
 					p.details.images.forEach(imgUrl => {
+						const imgWrap = document.createElement('div');
+						imgWrap.className = "min-w-full shrink-0 snap-center flex justify-center px-2";
+						
 						const imgEl = document.createElement('img');
-						imgEl.className = "w-full max-h-[400px] object-cover rounded-lg shadow-lg border border-gray-200 dark:border-gray-800";
+						imgEl.className = "max-w-full max-h-[400px] object-contain rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#2d2d2d] bg-[#1a1a1a]";
 						imgEl.src = imgUrl;
-						imgContainer.appendChild(imgEl);
+						
+						imgWrap.appendChild(imgEl);
+						imgContainer.appendChild(imgWrap);
 					});
+
+					// Kiểm tra hiện/ẩn nút điều hướng
+					if (p.details.images.length > 1) {
+						btnPrev.classList.remove('hidden');
+						btnNext.classList.remove('hidden');
+						if(scrollHint) scrollHint.classList.remove('hidden');
+					} else {
+						btnPrev.classList.add('hidden');
+						btnNext.classList.add('hidden');
+						if(scrollHint) scrollHint.classList.add('hidden');
+					}
 				}
 
-				// Mô tả dạng text
+				// 2. RENDER TEXT & TECH
 				document.getElementById('preview-desc-en').textContent = p.details.about.en;
 				document.getElementById('preview-desc-vi').textContent = p.details.about.vi;
 
-				// Cập nhật Tags
 				const techContainer = document.getElementById('preview-tech');
 				techContainer.innerHTML = '';
 				p.details.tech.forEach(t => {
 					const span = document.createElement('span');
-					span.className = 'px-3 py-1 bg-[#e0e0e0] dark:bg-[#2d2d2d] text-gray-800 dark:text-gray-200 text-xs font-bold rounded-full border border-gray-300 dark:border-gray-700 shadow-sm';
+					span.className = 'px-3 py-1 bg-[#2d2d2d] text-gray-200 text-xs font-bold rounded-full border border-gray-700 shadow-sm';
 					span.textContent = t;
 					techContainer.appendChild(span);
 				});
 
-				// Cập nhật Links với nút Copy
+				// 3. RENDER LINKS VỚI NÚT COPY
 				const linkContainer = document.getElementById('preview-links');
 				linkContainer.innerHTML = '';
 				if(p.details && p.details.links) {
 					p.details.links.forEach(l => {
 						const div = document.createElement('div');
-						div.className = "flex items-center gap-3 bg-white dark:bg-[#2d2d2d] px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full max-w-lg";
+						div.className = "flex items-center gap-3 bg-[#2d2d2d] px-4 py-2 rounded-lg border border-gray-700 shadow-sm w-full max-w-lg";
 						
 						div.innerHTML = `
-							<span class="font-bold text-[#E95420] w-32 shrink-0">${l.label}:</span>
-							<a href="${l.url}" target="_blank" class="flex-1 text-[#729fcf] hover:underline truncate text-sm">${l.url}</a>
-							<button class="copy-btn p-1.5 text-gray-500 hover:text-green-500 transition-colors bg-gray-100 dark:bg-[#1a1a1a] rounded" data-copy="${l.url}" title="Copy">
+							<span class="font-bold text-[#E95420] w-24 md:w-32 shrink-0">${l.label}:</span>
+							<a href="${l.url}" target="_blank" class="flex-1 text-[#729fcf] hover:underline truncate text-sm md:text-base">${l.url}</a>
+							<button class="copy-btn p-1.5 text-gray-500 hover:text-green-500 transition-colors bg-[#1a1a1a] rounded" data-copy="${l.url}" title="Copy">
 								<svg class="w-4 h-4 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
 							</button>
 						`;
@@ -680,17 +733,42 @@ const defaultWallpaper = "https://i.pinimg.com/736x/a7/fb/88/a7fb880a4c5acfdefb2
 					});
 				}
 
+				// SỬA LỖI SLIDER Ở ĐÂY:
+				// Bước A: Mở cửa sổ lên TRƯỚC để nó có display: flex (không còn bị ẩn nữa)
 				toggleApp('preview', 'open');
+
+				// Bước B: Đợi DOM render xong (50ms) thì mới gán scrollLeft = 0.
+				// Tắt behavior smooth tạm thời để ảnh nhảy thẳng về đầu trang mà không bị trượt từ từ
+				setTimeout(() => {
+					imgContainer.style.scrollBehavior = 'auto'; // Tắt cuộn mượt
+					imgContainer.scrollLeft = 0;                // Nhảy thẳng về ảnh số 1
+					
+					// Bật lại cuộn mượt cho các thao tác bấm nút Trái/Phải sau này
+					setTimeout(() => {
+						imgContainer.style.scrollBehavior = 'smooth';
+					}, 50);
+				}, 50);
 			}
 
-			// Bắt sự kiện Click cho Copy Button trên TOÀN BỘ document (Terminal Contact + Project Links)
+			// Sự kiện Bấm Nút Trái / Phải để cuộn ảnh
+			document.getElementById('btn-prev-img').addEventListener('click', () => {
+				const container = document.getElementById('preview-images');
+				container.scrollBy({ left: -container.clientWidth, behavior: 'smooth' });
+			});
+
+			document.getElementById('btn-next-img').addEventListener('click', () => {
+				const container = document.getElementById('preview-images');
+				container.scrollBy({ left: container.clientWidth, behavior: 'smooth' });
+			});
+
+			// (Phần document.body.addEventListener Click cho copy-btn giữ nguyên như cũ)
+
 			document.body.addEventListener('click', (e) => {
 				const copyBtn = (e.target as HTMLElement).closest('.copy-btn');
 				if (copyBtn) {
 					const textToCopy = copyBtn.getAttribute('data-copy');
 					navigator.clipboard.writeText(textToCopy).then(() => {
 						const originalHTML = copyBtn.innerHTML;
-						// Đổi icon sang checkmark xanh
 						copyBtn.innerHTML = `<svg class="w-4 h-4 text-green-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>`;
 						setTimeout(() => { copyBtn.innerHTML = originalHTML; }, 2000);
 					});
@@ -816,14 +894,9 @@ const defaultWallpaper = "https://i.pinimg.com/736x/a7/fb/88/a7fb880a4c5acfdefb2
 				});
 			});
 
-			const themeToggle = document.getElementById('theme-toggle');
+			// Xử lý đổi ngôn ngữ
 			const langSelect = document.getElementById('lang-select');
 			const topbarLang = document.getElementById('topbar-lang-indicator');
-			
-			themeToggle.addEventListener('change', (e) => {
-				if ((e.target as HTMLInputElement).checked) document.documentElement.classList.add('dark');
-				else document.documentElement.classList.remove('dark');
-			});
 
 			langSelect.addEventListener('change', (e) => {
 				const isVi = (e.target as HTMLSelectElement).value === 'vi';
