@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth; /* Thêm dòng này để cuộn mượt */
+}
+
+::selection {
+  background-color: #4ade80;
+  color: #000;
+}
+
+.dark ::selection {
+  background-color: #4ade80;
+  color: #000;
+}
