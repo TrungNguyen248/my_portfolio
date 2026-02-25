@@ -120,7 +120,7 @@ const defaultWallpaper = "/wp-1.jpg";
 		</div>
 
 		<div class="flex-1 relative w-full h-full flex">
-			
+	
 			<div class="w-16 h-full bg-black/40 border-r border-white/10 flex flex-col items-center py-4 gap-4 z-[9000] shadow-2xl backdrop-blur-md">
 				<button class="dock-btn group relative flex justify-center items-center w-12 h-12 rounded-lg hover:bg-white/20 transition-colors" data-app="terminal" id="dock-terminal">
 					<div class="w-10 h-10 bg-[#300a24] rounded-lg border border-gray-600 flex items-center justify-center shadow-lg">
@@ -143,6 +143,17 @@ const defaultWallpaper = "/wp-1.jpg";
 					<div class="app-dot absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-[#E95420] rounded-full hidden shadow-[0_0_5px_#E95420]"></div>
 					<span class="tooltip hidden group-hover:block absolute left-14 bg-black/80 text-white text-xs px-2 py-1 rounded whitespace-nowrap z-50"><span class="lang-en">Settings</span><span class="lang-vi">Cài đặt</span></span>
 				</button>
+
+				<a href="/fullstack_NguyenTrungNguyen.pdf" download="Fullstack Developer Nguyễn Trung Nguyên.pdf" class="dock-btn group relative flex justify-center items-center w-12 h-12 rounded-lg hover:bg-white/20 transition-colors mt-auto mb-2 cursor-pointer">
+					<div class="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center shadow-lg border border-green-500">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+					</div>
+					<span class="tooltip hidden group-hover:block absolute left-14 bg-black/80 text-white text-xs px-2 py-1 rounded whitespace-nowrap z-50">
+						<span class="lang-en">Download CV</span>
+						<span class="lang-vi">Tải CV</span>
+					</span>
+				</a>
+
 			</div>
 
 			<div class="flex-1 relative overflow-hidden" id="window-area">
